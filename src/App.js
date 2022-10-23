@@ -1,25 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import Header from './Header/Header';
+import Sidebar from './Sidebar/Sidebar';
+import { Outlet } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App(props) {
+  const [collapsed,setCollapsed]=React.useState(false)
+
+  return (  <div>
+  <Header />
+  <Sidebar clp={{collapsed,setCollapsed}} articleList={props.articleList} />
+  <Outlet context={{collapsed, setCollapsed}} />
+  {/* <Footer /> */}
+  </div>)
+
 }
 
 export default App;

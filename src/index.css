@@ -5,9 +5,149 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color:#714ca0
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.Header {
+  position: absolute;
+  width: 100vw;
+  height:17vh;
+  border-bottom: 0.1vw solid gray;
+  display: flex;
+  box-shadow: -2px -2px 5px 3px rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+.profile {
+  width:15vw;
+  margin-left: 1vw;
+  display: flex;
+}
+.banner {
+  width:78vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  margin-right:4em;
+  color:#714ca0;
+  padding-top:5vh
+}
+.motto {
+  text-align: end;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color:tomato
+}
+#admin {
+  float:right;
+  font-size: 0.5em;
+  color:white;
+  text-decoration: underline;
+  cursor: pointer;
+}
+#admin:hover{
+  color:blue;
+}
+
+#profileImgBox {
+  width:8vw;
+  margin-top:2vh;
+}
+#profileImg {
+  height:10vh;
+}
+.iconGroup :hover{
+  cursor:pointer;
+  color:purple;
+}
+#brief {
+  width:15vw;
+  margin-left:-2vw;
+  font-size: 0.75rem;
+  margin-top:2vh;
+  text-align: justify;
+}
+@media only screen and (max-width: 1300px) {
+  #brief {
+    margin-top:3vh;
+    font-size: 0.6rem;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  #brief {
+    display: none;
+  }
+}
+.Sidebar {
+  position: fixed;
+  top:20vh;
+  background-color: rgb(214, 184, 228);
+  display: flex;
+  height:75vh;
+  margin-left:0.5vw;
+  box-shadow: -2px -2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.ArticleList {
+  width:15vw;
+  height:75vh;
+}
+.SideBorder {
+  width:0.5vw;
+  height:75vh;
+  background-color: rgb(195, 195, 195);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5%;
+}
+.SideBorderCollapsed {
+  position: fixed;
+  top:20vh;
+  width: 0.5vw;
+  height:75vh;
+  background-color: rgb(195, 195, 195);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 5%;
+}
+.arrow {
+  color:gray;
+  transform: scale(0.4) translateX(-80%);
+}
+.Content {
+  position:absolute;
+  top:20vh;
+  width:75vw;
+  color:white;
+  text-align: justify;
+  padding-bottom:10vh;
+}
+.pdf {
+  width:100%;
+  display: flex;
+  justify-content: center;
+}
+
+.table {
+  width:100vw;
+  display: flex;
+  justify-content: space-around;
+  color:white;
+  margin-left:-20vw;
+  padding-top:5vh;
+  margin-top:5vh;
+}
+td {
+  border: 1px solid #333;
 }
